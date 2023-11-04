@@ -1,0 +1,62 @@
+$primary-text-color: #1d1d1d;
+$background-color: #efefef;
+$caption-background: rgba(0, 0, 0, 0.15);
+$image-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+$image-max-width: 140%;
+
+.section-card {
+  color: $primary-text-color;
+  // background: $background-color;
+  text-align: center;
+  min-width: 200px;
+
+  .figure {
+    background: $background-color;
+    text-align: center;
+    box-shadow: $image-shadow;
+
+    img {
+      vertical-align: top;
+      max-width: $image-max-width;
+      height: 400px;
+      object-fit: cover;
+      object-position: 60% 100%;
+    }
+
+    .caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: table;
+      padding: 0 20px;
+      transform: translate(-50%, -50%);
+
+      h3 {
+        color: $primary-text-color;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin: 0;
+        opacity: 0;
+        span {
+          font-weight: 700;
+          display: block;
+        }
+      }
+    }
+
+    &:hover,
+    &.hover {
+      img {
+        opacity: 0.3;
+        filter: grayscale(100%);
+      }
+
+      .caption {
+        opacity: 1;
+        h3 {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

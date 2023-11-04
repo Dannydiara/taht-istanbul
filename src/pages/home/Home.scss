@@ -1,0 +1,229 @@
+$primary-color: #00BFDD;
+$secondary-color: #636570;
+$tertiary-color: #bf4a54;
+$background-color: #efefef;
+$button-bg-color: #00BFDD;
+$button-text-color: white;
+$review-bg-color: #fcfcfc;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$card-text-color: #464444;
+
+.home {
+    min-width: 250px;
+    max-width: 100%;
+
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 2.188rem 1rem 3.438rem 1rem;
+        background-color: $background-color;
+    
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 10px 0;
+            
+            .button {
+                margin: 5px 3px;
+                text-align: center;
+            }
+        }
+    
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #636570;
+            line-height: 1.6rem;
+        }
+    
+    
+        @media (max-width: 768px) {
+            flex-direction: column; 
+            text-align: center; 
+            padding: 2rem auto; 
+            
+            .buttons {
+                flex-wrap: wrap;
+                .button {
+                    margin: 10px auto;
+                }
+            }
+        }
+    }
+    
+    .map {
+        position: relative;
+        max-width: 100%;
+        background-image: url("/assets/map.jpg");
+        height: 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-size: cover;
+        
+        @media (max-width: 768px) {
+            max-height: 13rem !important;
+        }
+    
+        @media (max-width: 1279px) {
+            max-height: 15rem;
+        }
+        
+        .button {
+            background-color: $primary-color;
+            color: white;
+            font-size: 16px;
+            box-shadow: 0px 7px 15px rgba(0, 191, 221, 0.25);
+        }
+    }
+    
+    .cardList {
+        position: relative;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        background: #fff;
+        text-align: center;
+        // margin: ;
+        padding: 4rem 2rem 2rem;
+    
+        .cardTitle {
+            font-family: "Roboto", sans-serif;
+            padding: 1.5rem 1rem;
+            margin: 1rem;
+            line-height: 1.5rem;
+    
+            h1 {
+                color: $card-text-color;
+                font-weight: 600;
+                letter-spacing: -1px;
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+    
+                @media (max-width: 768px) {
+                    font-size: 1.5rem;                
+                }
+            }
+    
+            @media (max-width: 768px) {
+                padding: 0.5rem;
+            }
+        }
+    
+        @media (max-width: 768px) {
+            padding: 2rem 1rem;
+        }
+    }
+    
+    .discover {
+        background: #efefef;
+        display: flex;
+        // flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 3px 10%;
+        flex-wrap: wrap;
+        align-content: center;
+    
+    
+        .discover-titles {
+            // margin-left: -5%;
+    
+            .discover-title {
+                padding: 0 10%;
+    
+                .buttons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center; 
+                    margin: 10px 0;
+                    
+                    .button {
+                        margin: 5px 3px;
+                        text-align: center;
+                    }
+                }
+    
+                @media (max-width:768px) {
+                    .buttons {
+                        flex-wrap: wrap;
+                        .button {
+                            margin: 3px 4px;
+                        }
+                    }
+                }
+            }
+    
+            @media (max-width: 768px) {
+                padding: 5px 0;
+                margin: 0;
+            }
+        }
+    }
+
+    .review {
+        width: 100%;
+        padding: 0 2rem;
+        height: auto;
+        border-radius: 20px;
+        background-color: $review-bg-color;
+        box-shadow: $shadow-color 0px 1px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        h1{
+            font-size: 2rem;
+            color:$card-text-color;
+            line-height: 1.2;
+            letter-spacing: 1px;
+            max-width: 100%;
+            word-break: break-word;
+            margin: 2rem 0;
+
+        }
+    }
+    
+    
+    .pricing {
+        display: block;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        max-height: none;
+        overflow: visible;
+        padding: 0 10px;
+        h2, p {
+            color: $secondary-color;
+        }
+
+        .pricing-title {
+            display: block;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 15% 2rem;
+            color: #232328;
+        }
+    
+    
+        .pricing-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: center;
+                
+              }
+        }
+    }
+}

@@ -1,0 +1,134 @@
+// Color variables
+$primaryBackground: rgba(0, 0, 0, 0.4);
+$primaryText: #f1ecec;
+$background: #fff;
+$border: #f1ecec;
+$buttonBackground: #f1ecec;
+$buttonText: #fff;
+$buttonBorderRadius: 100%;
+
+.container {
+  position: relative;
+
+  .mySwiper {
+    width: 100%;
+    height: 100vh;
+
+    .swiperSlide {
+      transform: translateZ(0);
+      transition: all 0.5s ease;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .content {
+        position: absolute;
+        text-align: center;
+        top: 23rem;
+        left: 50%;
+        opacity: 1;
+        width: 50%;
+        padding: 3rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(-50%);
+        background: $primaryBackground;
+        animation: slide-up 1s ease 0.5s;
+        animation-fill-mode: forwards;
+
+        * {
+          color: $primaryText;
+          margin-bottom: 1rem;
+        }
+
+        h2 {
+          font-size: 4.5rem;
+        }
+
+        hr {
+          height: 2px;
+          background: $primaryText;
+          width: 50%;
+        }
+
+        @media (max-width: 1096px) {
+          top: 15rem;
+          width: 60%;
+          padding: 2rem;
+
+          h2 {
+            font-size: 3rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+
+        @media (max-width: 768px) {
+          top: 15rem;
+          width: 80%;
+          padding: 1rem;
+
+          h2 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 0.8rem;
+          }
+        }
+
+        @media (max-height: 767px) {
+          top: 25%;
+          height: 50%;
+          padding: 0.5rem 0;
+        }
+      }
+
+      .socialIcons {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 90px;
+        padding: 0 10px;
+
+        .icon-link {
+          color: $primaryText;
+          padding: 0.5rem 0.6rem;
+          margin: 10px 0;
+          border: 1px solid $border;
+          border-radius: $buttonBorderRadius;
+        }
+
+        @media (max-width: 1220px) {
+          margin-left: 50px;
+        }
+
+        @media (max-width: 768px) {
+          visibility: hidden;
+        }
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: $buttonText !important;
+    }
+
+    @media (max-width: 1096px) {
+      height: 80vh;
+    }
+
+    @media (max-width: 768px) {
+      height: 60vh;
+      margin-bottom: 1rem;
+    }
+  }
+}

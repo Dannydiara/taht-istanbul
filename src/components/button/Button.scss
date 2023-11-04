@@ -1,0 +1,30 @@
+$primary: #FFF0F5;
+$secondary: rgb(80, 80, 80);
+$tertiary: #e41829;
+$primary-background: #FFF0F5;
+$secondary-background: rgb(103, 103, 103);
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $tertiary;
+    color: $primary;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    &:hover {
+        background-color: #f05763;
+        transition: all 0.3s ease;
+    }
+
+    .button-icon {
+        margin-right: 10px;
+        font-size: 2rem;
+        
+    }
+  }
+  

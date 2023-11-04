@@ -1,0 +1,63 @@
+// Color variables
+$card-background: #fff;
+$card-border: #e0e0e0;
+$card-border-radius: 8px;
+$card-hover-background: #f3efef;
+$card-rating-color: rgb(230, 197, 14);
+$card-content-color: #5f5858;
+$card-author-color: #252121;
+$button-color: #5f5858;
+$button-width: 1%;
+
+.review-card {
+  background: $card-background;
+  padding: 20px;
+  border: 1px solid $card-border;
+  border-radius: $card-border-radius;
+  text-align: center;
+  height: 15rem;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    background: $card-hover-background;
+  }
+
+  .rating {
+    font-size: 1.5rem;
+    color: $card-rating-color;
+  }
+
+  .content {
+    margin-top: 10px;
+    color: $card-content-color;
+    font-size: 1rem;
+  }
+
+  .author {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $card-author-color;
+  }
+
+  @media (max-width: 768px) {
+    .review-card {
+      padding: 10px;
+    }
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: $button-color !important;
+
+  @media (max-width: 1400px) {
+    width: $button-width;
+  }
+}
